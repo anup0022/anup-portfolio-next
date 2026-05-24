@@ -3,25 +3,140 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: #ededed;
+  --background: #06080d;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Blog Animated Illustrations */
+@keyframes grow-bar {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+@keyframes grow-bar-width {
+  from { width: 0; }
+  to { width: var(--bar-width); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.6); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes draw-line {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes flow-arrow {
+  0% { opacity: 0; transform: translateX(-10px); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(10px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.blog-chart-bar {
+  animation: grow-bar 1s ease-out forwards;
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+
+.blog-chart-bar-h {
+  animation: grow-bar-width 1.2s ease-out forwards;
+  width: 0;
+}
+
+.blog-metric-card {
+  animation: fade-in-up 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.blog-flow-arrow {
+  animation: flow-arrow 2s ease-in-out infinite;
+}
+
+.blog-arch-box {
+  animation: fade-in-up 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.blog-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.blog-spin {
+  animation: spin-slow 8s linear infinite;
+}
+
+.blog-bounce {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+/* Animated gradient for blog visuals */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.blog-gradient-bg {
+  background: linear-gradient(-45deg, #f0f9ff, #ede9fe, #ecfdf5, #fef3c7);
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Animate gradient for author box */
+@keyframes animate-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: animate-gradient 4s ease infinite;
+}
+
+/* Copy button styles for code blocks */
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
