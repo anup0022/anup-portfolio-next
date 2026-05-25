@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 interface TextToSpeechProps {
   content: string;
@@ -10,23 +10,56 @@ export default function TextToSpeech({ content }: TextToSpeechProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [isSupported, setIsSupported] = useState(true);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const chunksRef = useRef<string[]>([]);
+  const currentChunkRef = useRef(0);
+  const startTimeRef = useRef(0);
+  const elapsedBeforePauseRef = useRef(0);
 
   const plainText = content
     .replace(/<[^>]*>/g, "")
-    .replace(/[#*`\-\[\]()>|]/g, "")
-    .replace(/```[\s\S]*?```/g, "code block omitted")
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/[#*`\[\]()>|]/g, "")
+    .replace(/\-{2,}/g, " ")
     .replace(/\n+/g, ". ")
     .replace(/\s+/g, " ")
+    .replace(/\.\s*\./g, ".")
     .trim();
 
   const totalWords = plainText.split(/\s+/).length;
   const estimatedDuration = Math.ceil(totalWords / 150);
 
+  // Check if speech synthesis is supported
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.speechSynthesis) {
+      setIsSupported(false);
+    }
+  }, []);
+
+  // Split text into chunks for mobile compatibility (iOS cuts off long utterances)
+  useEffect(() => {
+    const sentences = plainText.match(/[^.!?]+[.!?]+/g) || [plainText];
+    const chunks: string[] = [];
+    let current = "";
+
+    for (const sentence of sentences) {
+      if ((current + sentence).length > 200) {
+        if (current) chunks.push(current.trim());
+        current = sentence;
+      } else {
+        current += sentence;
+      }
+    }
+    if (current) chunks.push(current.trim());
+    chunksRef.current = chunks;
+  }, [plainText]);
+
+  // Cleanup on unmount
   useEffect(() => {
     return () => {
-      if (window.speechSynthesis) {
+      if (typeof window !== "undefined" && window.speechSynthesis) {
         window.speechSynthesis.cancel();
       }
       if (intervalRef.current) {
@@ -35,59 +68,147 @@ export default function TextToSpeech({ content }: TextToSpeechProps) {
     };
   }, []);
 
+  const getVoice = useCallback((): SpeechSynthesisVoice | null => {
+    const voices = window.speechSynthesis.getVoices();
+    // Prefer natural-sounding voices
+    const preferred = voices.find(
+      (v) =>
+        v.lang.startsWith("en") &&
+        (v.name.includes("Samantha") ||
+          v.name.includes("Daniel") ||
+          v.name.includes("Google US") ||
+          v.name.includes("Google UK") ||
+          v.name.includes("Karen") ||
+          v.name.includes("Moira"))
+    );
+    if (preferred) return preferred;
+    // Fallback to any English voice
+    const english = voices.find((v) => v.lang.startsWith("en"));
+    return english || null;
+  }, []);
+
+  const speakChunk = useCallback(
+    (index: number) => {
+      if (index >= chunksRef.current.length) {
+        setIsPlaying(false);
+        setIsPaused(false);
+        setProgress(100);
+        if (intervalRef.current) clearInterval(intervalRef.current);
+        setTimeout(() => setProgress(0), 2000);
+        return;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(chunksRef.current[index]);
+      utterance.rate = 1;
+      utterance.pitch = 1;
+      utterance.lang = "en-US";
+
+      const voice = getVoice();
+      if (voice) utterance.voice = voice;
+
+      utterance.onend = () => {
+        currentChunkRef.current = index + 1;
+        // Small delay between chunks for natural pacing
+        setTimeout(() => {
+          if (currentChunkRef.current < chunksRef.current.length) {
+            speakChunk(currentChunkRef.current);
+          } else {
+            setIsPlaying(false);
+            setIsPaused(false);
+            setProgress(100);
+            if (intervalRef.current) clearInterval(intervalRef.current);
+            setTimeout(() => setProgress(0), 2000);
+          }
+        }, 100);
+      };
+
+      utterance.onerror = (e) => {
+        // Ignore 'interrupted' errors (caused by cancel() before new speech)
+        if (e.error === "interrupted") return;
+        setIsPlaying(false);
+        setIsPaused(false);
+        if (intervalRef.current) clearInterval(intervalRef.current);
+      };
+
+      utteranceRef.current = utterance;
+      window.speechSynthesis.speak(utterance);
+    },
+    [getVoice]
+  );
+
+  const startProgressTracking = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    const totalMs = estimatedDuration * 60 * 1000;
+    startTimeRef.current = Date.now();
+
+    intervalRef.current = setInterval(() => {
+      const elapsed = elapsedBeforePauseRef.current + (Date.now() - startTimeRef.current);
+      const newProgress = Math.min((elapsed / totalMs) * 100, 99);
+      setProgress(newProgress);
+    }, 500);
+  }, [estimatedDuration]);
+
   const handlePlay = () => {
-    if (isPaused && window.speechSynthesis.paused) {
-      window.speechSynthesis.resume();
-      setIsPaused(false);
-      setIsPlaying(true);
-      startProgressTracking();
+    if (!isSupported) return;
+
+    // Resume from pause — on mobile, we restart from current chunk since pause/resume is unreliable
+    if (isPaused) {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        // Mobile: restart from current chunk
+        setIsPaused(false);
+        setIsPlaying(true);
+        startProgressTracking();
+        speakChunk(currentChunkRef.current);
+      } else {
+        // Desktop: use native resume
+        window.speechSynthesis.resume();
+        setIsPaused(false);
+        setIsPlaying(true);
+        startProgressTracking();
+      }
       return;
     }
 
+    // Fresh start
     window.speechSynthesis.cancel();
-
-    const utterance = new SpeechSynthesisUtterance(plainText);
-    utterance.rate = 1;
-    utterance.pitch = 1;
-    utterance.lang = "en-US";
-
-    const voices = window.speechSynthesis.getVoices();
-    const preferredVoice = voices.find(
-      (v) =>
-        v.name.includes("Google") ||
-        v.name.includes("Samantha") ||
-        v.name.includes("Daniel")
-    );
-    if (preferredVoice) utterance.voice = preferredVoice;
-
-    utterance.onend = () => {
-      setIsPlaying(false);
-      setIsPaused(false);
-      setProgress(100);
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      setTimeout(() => setProgress(0), 2000);
-    };
-
-    utterance.onerror = () => {
-      setIsPlaying(false);
-      setIsPaused(false);
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-
-    utteranceRef.current = utterance;
-    window.speechSynthesis.speak(utterance);
-    setIsPlaying(true);
+    currentChunkRef.current = 0;
+    elapsedBeforePauseRef.current = 0;
     setProgress(0);
+    setIsPlaying(true);
     startProgressTracking();
+
+    // Ensure voices are loaded (required on some mobile browsers)
+    const voices = window.speechSynthesis.getVoices();
+    if (voices.length === 0) {
+      // Wait for voices to load
+      window.speechSynthesis.onvoiceschanged = () => {
+        speakChunk(0);
+        window.speechSynthesis.onvoiceschanged = null;
+      };
+      // Fallback: start anyway after 500ms
+      setTimeout(() => {
+        if (currentChunkRef.current === 0) {
+          speakChunk(0);
+        }
+      }, 500);
+    } else {
+      speakChunk(0);
+    }
   };
 
   const handlePause = () => {
-    if (window.speechSynthesis.speaking) {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      // On mobile, cancel and track position
+      window.speechSynthesis.cancel();
+    } else {
       window.speechSynthesis.pause();
-      setIsPaused(true);
-      setIsPlaying(false);
-      if (intervalRef.current) clearInterval(intervalRef.current);
     }
+    elapsedBeforePauseRef.current += Date.now() - startTimeRef.current;
+    setIsPaused(true);
+    setIsPlaying(false);
+    if (intervalRef.current) clearInterval(intervalRef.current);
   };
 
   const handleStop = () => {
@@ -95,20 +216,12 @@ export default function TextToSpeech({ content }: TextToSpeechProps) {
     setIsPlaying(false);
     setIsPaused(false);
     setProgress(0);
+    currentChunkRef.current = 0;
+    elapsedBeforePauseRef.current = 0;
     if (intervalRef.current) clearInterval(intervalRef.current);
   };
 
-  const startProgressTracking = () => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    const totalMs = estimatedDuration * 60 * 1000;
-    const startTime = Date.now() - (progress / 100) * totalMs;
-
-    intervalRef.current = setInterval(() => {
-      const elapsed = Date.now() - startTime;
-      const newProgress = Math.min((elapsed / totalMs) * 100, 99);
-      setProgress(newProgress);
-    }, 500);
-  };
+  if (!isSupported) return null;
 
   return (
     <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-r from-violet-50 via-blue-50 to-cyan-50 p-5 shadow-sm">
@@ -180,11 +293,10 @@ export default function TextToSpeech({ content }: TextToSpeechProps) {
 
           {/* Animated waveform progress bar */}
           <div className="relative h-8 flex items-center">
-            {/* Waveform bars */}
             <div className="absolute inset-0 flex items-center gap-[2px]">
               {[...Array(50)].map((_, i) => {
                 const isActive = (i / 50) * 100 <= progress;
-                const height = 4 + Math.sin(i * 0.5) * 8 + Math.random() * 6;
+                const height = 4 + Math.sin(i * 0.5) * 8 + Math.cos(i * 0.3) * 4;
                 return (
                   <div
                     key={i}
@@ -207,7 +319,8 @@ export default function TextToSpeech({ content }: TextToSpeechProps) {
           {/* Time indicator */}
           <div className="flex justify-between mt-1">
             <span className="text-[10px] text-gray-400">
-              {Math.floor((progress / 100) * estimatedDuration)}:{String(Math.floor(((progress / 100) * estimatedDuration * 60) % 60)).padStart(2, "0")}
+              {Math.floor((progress / 100) * estimatedDuration)}:
+              {String(Math.floor(((progress / 100) * estimatedDuration * 60) % 60)).padStart(2, "0")}
             </span>
             <span className="text-[10px] text-gray-400">
               {estimatedDuration}:00
