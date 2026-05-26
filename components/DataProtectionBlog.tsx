@@ -289,47 +289,6 @@ function ArticleTTS() {
 /* ─────────────────────────────────────────────
    SVG: Data Breach Flow Diagram
 ───────────────────────────────────────────── */
-function ShieldHeroSVG() {
-  return (
-    <svg viewBox="0 0 400 400" className="w-full max-w-[380px] mx-auto drop-shadow-xl" aria-hidden="true">
-      <defs>
-        <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#ca8a04" />
-          <stop offset="100%" stopColor="#65a30d" />
-        </linearGradient>
-        <linearGradient id="shieldInner" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#fefce8" />
-          <stop offset="100%" stopColor="#fef9c3" />
-        </linearGradient>
-        <filter id="glow"><feGaussianBlur stdDeviation="3" result="coloredBlur" /><feMerge><feMergeNode in="coloredBlur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
-      </defs>
-      <ellipse cx="200" cy="200" rx="170" ry="170" fill="none" stroke="#ca8a04" strokeWidth="0.5" opacity="0.3">
-        <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="20s" repeatCount="indefinite" />
-      </ellipse>
-      <ellipse cx="200" cy="200" rx="150" ry="150" fill="none" stroke="#65a30d" strokeWidth="0.5" opacity="0.25">
-        <animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200" dur="25s" repeatCount="indefinite" />
-      </ellipse>
-      <circle cx="70" cy="200" r="4" fill="#ca8a04" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="20s" repeatCount="indefinite" />
-      </circle>
-      <circle cx="330" cy="200" r="3" fill="#65a30d" opacity="0.6">
-        <animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200" dur="25s" repeatCount="indefinite" />
-      </circle>
-      <path d="M200 80 L300 130 L300 240 C300 300 200 340 200 340 C200 340 100 300 100 240 L100 130 Z" fill="url(#shieldGrad)" opacity="0.12" />
-      <path d="M200 95 L285 138 L285 235 C285 285 200 320 200 320 C200 320 115 285 115 235 L115 138 Z" fill="url(#shieldInner)" stroke="url(#shieldGrad)" strokeWidth="2.5" />
-      <rect x="175" y="200" width="50" height="40" rx="6" fill="none" stroke="#854d0e" strokeWidth="2.5" filter="url(#glow)" />
-      <path d="M185 200 V185 C185 172 192 165 200 165 C208 165 215 172 215 185 V200" fill="none" stroke="#854d0e" strokeWidth="2.5" strokeLinecap="round" filter="url(#glow)" />
-      <circle cx="200" cy="218" r="5" fill="#ca8a04"><animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" /></circle>
-      <line x1="200" y1="222" x2="200" y2="230" stroke="#ca8a04" strokeWidth="2" strokeLinecap="round" />
-      <circle cx="270" cy="150" r="18" fill="#16a34a" opacity="0.9"><animate attributeName="r" values="18;20;18" dur="3s" repeatCount="indefinite" /></circle>
-      <polyline points="261,150 268,157 280,144" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-/* ─────────────────────────────────────────────
-   SVG: Data Breach Flow Diagram
-───────────────────────────────────────────── */
 function DataBreachFlowSVG() {
   const flowSteps = [
     { title: "ATTACKER", desc1: "Scans for", desc2: "vulnerabilities", emoji: "💻", gradient: "from-red-600 to-red-700", step: "STEP 1" },
