@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
     title: "Data Protection: Why 68% of Websites Are Insecure & How to Fix Yours",
     excerpt:
       "A comprehensive visual guide to understanding web security vulnerabilities, data protection fundamentals, and the essential steps every developer must take to protect user data in 2026.",
-    coverImage: "/blog/data-protection-cover.svg",
+    coverImage: "https://www.anup-singh.in/blog/data-protection-cover.svg",
     coverImageAlt: "Data protection shield with lock icon representing web security",
     date: "2026-05-26",
     modified: "2026-05-26",

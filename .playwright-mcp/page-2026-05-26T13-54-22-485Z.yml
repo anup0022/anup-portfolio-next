@@ -1,0 +1,285 @@
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - link "A.Singh" [ref=e5] [cursor=pointer]:
+      - /url: /
+    - navigation "Main navigation" [ref=e6]:
+      - link "About" [ref=e7] [cursor=pointer]:
+        - /url: /#about
+        - text: About
+      - link "Skills" [ref=e8] [cursor=pointer]:
+        - /url: /#skills
+        - text: Skills
+      - link "Experience" [ref=e9] [cursor=pointer]:
+        - /url: /#experience
+        - text: Experience
+      - link "Projects" [ref=e10] [cursor=pointer]:
+        - /url: /#projects
+        - text: Projects
+      - link "Blog" [ref=e11] [cursor=pointer]:
+        - /url: /blog
+        - text: Blog
+      - link "Contact" [ref=e13] [cursor=pointer]:
+        - /url: /#contact
+        - text: Contact
+  - generic [ref=e15]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e25]: Critical Security Report 2026
+        - 'heading "Data Protection: Why 68% of Websites Are Insecure" [level=1] [ref=e26]':
+          - text: "Data Protection:"
+          - text: Why 68% of Websites
+          - text: Are Insecure
+        - paragraph [ref=e27]: Every 39 seconds, a cyberattack occurs. Most websites have basic vulnerabilities that take less than an hour to fix. This guide shows you exactly what's wrong and how to protect your users.
+        - generic [ref=e28]:
+          - generic [ref=e29]: Security
+          - generic [ref=e30]: Data Protection
+          - generic [ref=e31]: OWASP
+          - generic [ref=e32]: Encryption
+        - generic [ref=e33]:
+          - generic [ref=e34]: May 26, 2026
+          - generic [ref=e36]: 12 min read
+          - generic [ref=e38]: By Anup Singh
+      - img [ref=e40]
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - generic [ref=e57]: The Reality
+        - heading "How Insecure Is the Web?" [level=2] [ref=e58]
+        - paragraph [ref=e59]: Based on analysis of 1.2 million websites worldwide, these numbers reveal just how vulnerable most sites are to attacks.
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - img [ref=e63]
+            - generic [ref=e67]: 0%
+          - generic [ref=e68]: Websites with at least 1 vulnerability
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - img [ref=e71]
+            - generic [ref=e75]: 0%
+          - generic [ref=e76]: Sites without HTTPS properly configured
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - img [ref=e79]
+            - generic [ref=e83]: 0%
+          - generic [ref=e84]: Use outdated software components
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - img [ref=e87]
+            - generic [ref=e91]: 0%
+          - generic [ref=e92]: No Content Security Policy headers
+      - generic [ref=e93]:
+        - heading "Most Common Vulnerabilities (OWASP Top 10)" [level=3] [ref=e94]
+        - generic [ref=e95]:
+          - generic [ref=e97]:
+            - generic [ref=e98]: Broken Access Control
+            - generic [ref=e99]: 0%
+          - generic [ref=e102]:
+            - generic [ref=e103]: Cryptographic Failures
+            - generic [ref=e104]: 0%
+          - generic [ref=e107]:
+            - generic [ref=e108]: Injection Attacks (SQL/XSS)
+            - generic [ref=e109]: 0%
+          - generic [ref=e112]:
+            - generic [ref=e113]: Insecure Design
+            - generic [ref=e114]: 0%
+          - generic [ref=e117]:
+            - generic [ref=e118]: Security Misconfiguration
+            - generic [ref=e119]: 0%
+          - generic [ref=e122]:
+            - generic [ref=e123]: Vulnerable Components
+            - generic [ref=e124]: 0%
+          - generic [ref=e127]:
+            - generic [ref=e128]: Authentication Failures
+            - generic [ref=e129]: 0%
+        - paragraph [ref=e131]: "Source: OWASP Foundation, Web Security Report 2026"
+    - generic [ref=e134]:
+      - generic [ref=e135]:
+        - generic [ref=e136]: Attack Flow
+        - heading "How a Data Breach Happens" [level=2] [ref=e137]
+        - paragraph [ref=e138]: Understanding the attack chain helps you know where to place your defenses. Most breaches follow this predictable 4-step pattern.
+      - img "Data breach flow diagram showing how attacks happen" [ref=e140]:
+        - generic [ref=e141]:
+          - generic [ref=e143]: ATTACKER
+          - generic [ref=e144]: Scans for
+          - generic [ref=e145]: vulnerabilities
+          - generic [ref=e147]: 💻
+        - generic [ref=e150]:
+          - generic [ref=e152]: VULNERABILITY
+          - generic [ref=e153]: Weak passwords,
+          - generic [ref=e154]: no HTTPS, outdated
+          - generic [ref=e155]: software
+          - generic [ref=e157]: ⚠️
+        - generic [ref=e160]:
+          - generic [ref=e162]: DATA STOLEN
+          - generic [ref=e163]: User credentials,
+          - generic [ref=e164]: payment info,
+          - generic [ref=e165]: personal data
+          - generic [ref=e167]: 🔒
+        - generic [ref=e170]:
+          - generic [ref=e172]: IMPACT
+          - generic [ref=e173]: Financial loss
+          - generic [ref=e174]: Reputation damage
+          - generic [ref=e175]: Legal penalties
+          - generic [ref=e177]: 💰
+        - generic [ref=e178]: STEP 1
+        - generic [ref=e179]: STEP 2
+        - generic [ref=e180]: STEP 3
+        - generic [ref=e181]: STEP 4
+        - generic [ref=e182]: Reconnaissance
+        - generic [ref=e183]: Exploitation
+        - generic [ref=e184]: Exfiltration
+        - generic [ref=e185]: Damage
+        - generic [ref=e186]: "Average time: 4.2 hours from initial scan to data breach"
+      - generic [ref=e187]:
+        - generic [ref=e188]:
+          - generic [ref=e189]: 0-2 hrs
+          - paragraph [ref=e190]: Automated bots scan millions of sites for known vulnerabilities
+        - generic [ref=e191]:
+          - generic [ref=e192]: 2-3 hrs
+          - paragraph [ref=e193]: Exploit is deployed against weak points like unpatched plugins or SQL injection
+        - generic [ref=e194]:
+          - generic [ref=e195]: 3-4 hrs
+          - paragraph [ref=e196]: Data is extracted including credentials, emails, payment information
+        - generic [ref=e197]:
+          - generic [ref=e198]: 4+ hrs
+          - paragraph [ref=e199]: Stolen data is sold on dark web or used for identity theft
+    - generic [ref=e202]:
+      - generic [ref=e203]:
+        - generic [ref=e204]: Action Items
+        - heading "8 Essential Fixes for Your Website" [level=2] [ref=e205]
+        - paragraph [ref=e206]: These fundamental security measures can prevent 90%+ of common attacks. Most take less than an hour to implement.
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - generic [ref=e209]: "01"
+          - img [ref=e211]
+          - heading "Enable HTTPS" [level=3] [ref=e214]
+          - paragraph [ref=e215]: Install SSL/TLS certificate. Free via Let's Encrypt. Encrypts all data in transit between user and server.
+        - generic [ref=e216]:
+          - generic [ref=e217]: "02"
+          - img [ref=e219]
+          - heading "Strong Authentication" [level=3] [ref=e223]
+          - paragraph [ref=e224]: Enforce strong passwords, implement 2FA/MFA, use bcrypt for password hashing with salt rounds 12+.
+        - generic [ref=e225]:
+          - generic [ref=e226]: "03"
+          - img [ref=e228]
+          - heading "Security Headers" [level=3] [ref=e230]
+          - paragraph [ref=e231]: Add CSP, X-Frame-Options, HSTS, X-Content-Type. Prevents XSS, clickjacking, and MIME attacks.
+        - generic [ref=e232]:
+          - generic [ref=e233]: "04"
+          - img [ref=e235]
+          - heading "Update Dependencies" [level=3] [ref=e239]
+          - paragraph [ref=e240]: Run npm audit weekly. Patch known CVEs immediately. Use Dependabot or Snyk for automated alerts.
+        - generic [ref=e241]:
+          - generic [ref=e242]: "05"
+          - img [ref=e244]
+          - heading "Input Validation" [level=3] [ref=e247]
+          - paragraph [ref=e248]: Validate and sanitize ALL user input server-side. Use parameterized queries. Never trust client data.
+        - generic [ref=e249]:
+          - generic [ref=e250]: "06"
+          - img [ref=e252]
+          - heading "Rate Limiting" [level=3] [ref=e255]
+          - paragraph [ref=e256]: Limit login attempts (5/min), API calls (100/min), and form submissions. Blocks brute-force attacks.
+        - generic [ref=e257]:
+          - generic [ref=e258]: "07"
+          - img [ref=e260]
+          - heading "Error Handling" [level=3] [ref=e263]
+          - paragraph [ref=e264]: Never expose stack traces or DB errors to users. Use generic error pages. Log details server-side only.
+        - generic [ref=e265]:
+          - generic [ref=e266]: "08"
+          - img [ref=e268]
+          - heading "CORS & Cookies" [level=3] [ref=e270]
+          - paragraph [ref=e271]: Set strict CORS origins. Use HttpOnly, Secure, SameSite=Strict on cookies. Prevents CSRF attacks.
+    - generic [ref=e274]:
+      - generic [ref=e275]:
+        - generic [ref=e276]: Defense Strategy
+        - heading "Layered Security Architecture" [level=2] [ref=e277]
+        - paragraph [ref=e278]: No single measure is enough. True security comes from multiple layers working together, each catching what the others miss.
+      - img "Layered security architecture diagram" [ref=e279]:
+        - generic [ref=e281]: CDN / WAF / DDoS Protection
+        - generic [ref=e283]: HTTPS / TLS / Security Headers
+        - generic [ref=e285]: Authentication / Authorization / Validation
+        - generic [ref=e287]: YOUR DATA
+        - generic [ref=e288]: Encrypted at rest
+        - generic [ref=e289]:
+          - generic [ref=e291]: Attack
+          - generic [ref=e293]: BLOCKED
+        - generic [ref=e294]:
+          - generic [ref=e296]: Attack
+          - generic [ref=e298]: BLOCKED
+        - generic [ref=e299]:
+          - generic [ref=e301]: Attack
+          - generic [ref=e303]: BLOCKED
+    - generic [ref=e307]:
+      - generic [ref=e308]:
+        - generic [ref=e309]: Quick Win
+        - heading "5-Minute Security Checklist" [level=2] [ref=e310]
+        - paragraph [ref=e311]: Run through this checklist right now. Each item you can verify adds a layer of protection.
+      - generic [ref=e312]:
+        - generic [ref=e313]:
+          - img [ref=e315]
+          - generic [ref=e317]: SSL certificate is valid and not expired
+          - generic [ref=e318]: Critical
+        - generic [ref=e319]:
+          - img [ref=e321]
+          - generic [ref=e323]: All HTTP requests redirect to HTTPS
+          - generic [ref=e324]: Critical
+        - generic [ref=e325]:
+          - img [ref=e327]
+          - generic [ref=e329]: Passwords are hashed (not stored in plain text)
+          - generic [ref=e330]: Critical
+        - generic [ref=e331]:
+          - img [ref=e333]
+          - generic [ref=e335]: SQL queries use parameterized statements
+          - generic [ref=e336]: Critical
+        - generic [ref=e337]:
+          - img [ref=e339]
+          - generic [ref=e341]: Security headers (CSP, HSTS, X-Frame) are set
+          - generic [ref=e342]: High
+        - generic [ref=e343]:
+          - img [ref=e345]
+          - generic [ref=e347]: Dependencies have no known CVEs (npm audit)
+          - generic [ref=e348]: High
+        - generic [ref=e349]:
+          - img [ref=e351]
+          - generic [ref=e353]: Rate limiting is enabled on login/API endpoints
+          - generic [ref=e354]: High
+        - generic [ref=e355]:
+          - img [ref=e357]
+          - generic [ref=e359]: Error messages don't expose internal details
+          - generic [ref=e360]: Medium
+        - generic [ref=e361]:
+          - img [ref=e363]
+          - generic [ref=e365]: CORS is configured with specific allowed origins
+          - generic [ref=e366]: Medium
+        - generic [ref=e367]:
+          - img [ref=e369]
+          - generic [ref=e371]: Session cookies use HttpOnly + Secure + SameSite
+          - generic [ref=e372]: Medium
+        - generic [ref=e373]:
+          - img [ref=e375]
+          - generic [ref=e377]: File uploads are validated and size-limited
+          - generic [ref=e378]: Medium
+        - generic [ref=e379]:
+          - img [ref=e381]
+          - generic [ref=e383]: Admin panels are not publicly accessible
+          - generic [ref=e384]: High
+    - generic [ref=e387]:
+      - generic [ref=e388]:
+        - img [ref=e390]
+        - heading "Security Is Not Optional" [level=2] [ref=e392]
+        - paragraph [ref=e393]: With data breaches costing an average of $4.45 million in 2025, security is not a feature - it's a foundation. Start with the basics above and build from there. Every fix you make protects real people's real data.
+        - generic [ref=e394]:
+          - link "OWASP Top 10" [ref=e395] [cursor=pointer]:
+            - /url: https://owasp.org/www-project-top-ten/
+            - text: OWASP Top 10
+            - img [ref=e396]
+          - link "Free SSL Certificate" [ref=e398] [cursor=pointer]:
+            - /url: https://letsencrypt.org/
+            - text: Free SSL Certificate
+            - img [ref=e399]
+      - paragraph [ref=e401]: Written by Anup Singh - Senior Software Engineer with 9.5+ years of experience building secure, scalable web applications.
+  - generic [ref=e403]:
+    - paragraph [ref=e404]: © 2026 Anup Singh. Senior Frontend Developer & React Engineer.
+    - link "Back to all articles" [ref=e405] [cursor=pointer]:
+      - /url: /blog
+      - img [ref=e406]
+      - text: Back to all articles

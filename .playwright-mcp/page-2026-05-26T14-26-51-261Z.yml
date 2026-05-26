@@ -1,0 +1,309 @@
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - link "A.Singh" [ref=e5] [cursor=pointer]:
+      - /url: /
+    - navigation "Main navigation" [ref=e6]:
+      - link "About" [ref=e7] [cursor=pointer]:
+        - /url: /#about
+        - text: About
+      - link "Skills" [ref=e8] [cursor=pointer]:
+        - /url: /#skills
+        - text: Skills
+      - link "Experience" [ref=e9] [cursor=pointer]:
+        - /url: /#experience
+        - text: Experience
+      - link "Projects" [ref=e10] [cursor=pointer]:
+        - /url: /#projects
+        - text: Projects
+      - link "Blog" [ref=e11] [cursor=pointer]:
+        - /url: /blog
+        - text: Blog
+      - link "Contact" [ref=e13] [cursor=pointer]:
+        - /url: /#contact
+        - text: Contact
+  - generic [ref=e15]:
+    - generic [ref=e20]:
+      - generic [ref=e23]: Critical Security Report 2026
+      - 'heading "Data Protection: Why 68% of Websites Are Insecure" [level=1] [ref=e24]'
+      - paragraph [ref=e25]: Every 39 seconds, a cyberattack occurs. Most websites have basic vulnerabilities that take less than an hour to fix. This guide shows you exactly what's wrong and how to protect your users.
+      - generic [ref=e26]:
+        - generic [ref=e27]: Security
+        - generic [ref=e28]: Data Protection
+        - generic [ref=e29]: OWASP
+        - generic [ref=e30]: Encryption
+      - generic [ref=e31]:
+        - generic [ref=e32]: May 26, 2026
+        - generic [ref=e34]: 12 min read
+        - generic [ref=e36]: By Anup Singh
+      - img [ref=e38]
+    - generic [ref=e53]:
+      - button "Play" [ref=e54] [cursor=pointer]:
+        - img [ref=e55]
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e60]: Listen to Article
+          - generic [ref=e61]: 4 min
+        - generic [ref=e98]:
+          - generic [ref=e99]: 0:00
+          - generic [ref=e100]: 4:00
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - generic [ref=e105]: The Reality
+        - heading "How Insecure Is the Web?" [level=2] [ref=e106]
+        - paragraph [ref=e107]: Based on analysis of 1.2 million websites worldwide, these numbers reveal just how vulnerable most sites are to attacks.
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - img [ref=e111]
+            - generic [ref=e115]: 0%
+          - generic [ref=e116]: Websites with at least 1 vulnerability
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - img [ref=e119]
+            - generic [ref=e123]: 0%
+          - generic [ref=e124]: Sites without HTTPS properly configured
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - img [ref=e127]
+            - generic [ref=e131]: 0%
+          - generic [ref=e132]: Use outdated software components
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - img [ref=e135]
+            - generic [ref=e139]: 0%
+          - generic [ref=e140]: No Content Security Policy headers
+      - generic [ref=e141]:
+        - heading "Most Common Vulnerabilities (OWASP Top 10)" [level=3] [ref=e142]
+        - generic [ref=e143]:
+          - generic [ref=e145]:
+            - generic [ref=e146]: Broken Access Control
+            - generic [ref=e147]: 0%
+          - generic [ref=e150]:
+            - generic [ref=e151]: Cryptographic Failures
+            - generic [ref=e152]: 0%
+          - generic [ref=e155]:
+            - generic [ref=e156]: Injection Attacks (SQL/XSS)
+            - generic [ref=e157]: 0%
+          - generic [ref=e160]:
+            - generic [ref=e161]: Insecure Design
+            - generic [ref=e162]: 0%
+          - generic [ref=e165]:
+            - generic [ref=e166]: Security Misconfiguration
+            - generic [ref=e167]: 0%
+          - generic [ref=e170]:
+            - generic [ref=e171]: Vulnerable Components
+            - generic [ref=e172]: 0%
+          - generic [ref=e175]:
+            - generic [ref=e176]: Authentication Failures
+            - generic [ref=e177]: 0%
+        - paragraph [ref=e179]: "Source: OWASP Foundation, Web Security Report 2026"
+    - generic [ref=e182]:
+      - generic [ref=e183]:
+        - generic [ref=e184]: Attack Flow
+        - heading "How a Data Breach Happens" [level=2] [ref=e185]
+        - paragraph [ref=e186]: Understanding the attack chain helps you know where to place your defenses.
+      - img "Data breach flow diagram" [ref=e188]:
+        - generic [ref=e189]:
+          - generic [ref=e191]: ATTACKER
+          - generic [ref=e192]: Scans for
+          - generic [ref=e193]: vulnerabilities
+          - generic [ref=e195]: 💻
+        - generic [ref=e198]:
+          - generic [ref=e200]: VULNERABILITY
+          - generic [ref=e201]: Weak passwords,
+          - generic [ref=e202]: no HTTPS, outdated
+          - generic [ref=e204]: ⚠️
+        - generic [ref=e207]:
+          - generic [ref=e209]: DATA STOLEN
+          - generic [ref=e210]: User credentials,
+          - generic [ref=e211]: payment info
+          - generic [ref=e213]: 🔒
+        - generic [ref=e216]:
+          - generic [ref=e218]: IMPACT
+          - generic [ref=e219]: Financial loss
+          - generic [ref=e220]: Reputation damage
+          - generic [ref=e222]: 💰
+        - generic [ref=e223]: STEP 1
+        - generic [ref=e224]: STEP 2
+        - generic [ref=e225]: STEP 3
+        - generic [ref=e226]: STEP 4
+        - generic [ref=e227]: "Average time: 4.2 hours from initial scan to data breach"
+      - generic [ref=e228]:
+        - generic [ref=e229]:
+          - generic [ref=e230]: 0-2 hrs
+          - paragraph [ref=e231]: Automated bots scan millions of sites for known vulnerabilities
+        - generic [ref=e232]:
+          - generic [ref=e233]: 2-3 hrs
+          - paragraph [ref=e234]: Exploit is deployed against weak points like unpatched plugins
+        - generic [ref=e235]:
+          - generic [ref=e236]: 3-4 hrs
+          - paragraph [ref=e237]: Data is extracted including credentials and payment info
+        - generic [ref=e238]:
+          - generic [ref=e239]: 4+ hrs
+          - paragraph [ref=e240]: Stolen data is sold on dark web or used for identity theft
+    - generic [ref=e243]:
+      - generic [ref=e244]:
+        - generic [ref=e245]: Action Items
+        - heading "8 Essential Fixes for Your Website" [level=2] [ref=e246]
+        - paragraph [ref=e247]: Click each card to reveal pro tips. These measures can prevent 90%+ of common attacks.
+      - generic [ref=e248]:
+        - 'button "01 Enable HTTPS Install SSL/TLS certificate. Encrypts all data in transit. Pro Tip: Use certbot with auto-renewal: certbot renew --dry-run. Set up cron job for automatic certificate renewal every 60 days. Click for pro tip" [ref=e249] [cursor=pointer]':
+          - generic [ref=e250]: "01"
+          - img [ref=e252]
+          - heading "Enable HTTPS" [level=3] [ref=e255]
+          - paragraph [ref=e256]: Install SSL/TLS certificate. Encrypts all data in transit.
+          - paragraph [ref=e258]: "Pro Tip: Use certbot with auto-renewal: certbot renew --dry-run. Set up cron job for automatic certificate renewal every 60 days."
+          - generic [ref=e259]: Click for pro tip
+        - 'button "02 Strong Authentication Enforce 2FA/MFA with bcrypt hashing. Pro Tip: Use bcrypt with minimum 12 salt rounds. Implement TOTP-based 2FA using libraries like speakeasy. Never store plain-text passwords. Click for pro tip" [ref=e260] [cursor=pointer]':
+          - generic [ref=e261]: "02"
+          - img [ref=e263]
+          - heading "Strong Authentication" [level=3] [ref=e267]
+          - paragraph [ref=e268]: Enforce 2FA/MFA with bcrypt hashing.
+          - paragraph [ref=e270]: "Pro Tip: Use bcrypt with minimum 12 salt rounds. Implement TOTP-based 2FA using libraries like speakeasy. Never store plain-text passwords."
+          - generic [ref=e271]: Click for pro tip
+        - 'button "03 Security Headers Add CSP, HSTS, X-Frame-Options. Pro Tip: Start with: Content-Security-Policy: default-src ''self''; Strict-Transport-Security: max-age=31536000; includeSubDomains Click for pro tip" [ref=e272] [cursor=pointer]':
+          - generic [ref=e273]: "03"
+          - img [ref=e275]
+          - heading "Security Headers" [level=3] [ref=e277]
+          - paragraph [ref=e278]: Add CSP, HSTS, X-Frame-Options.
+          - paragraph [ref=e280]: "Pro Tip: Start with: Content-Security-Policy: default-src 'self'; Strict-Transport-Security: max-age=31536000; includeSubDomains"
+          - generic [ref=e281]: Click for pro tip
+        - 'button "04 Update Dependencies Run npm audit weekly. Patch CVEs. Pro Tip: Add ''npm audit --production'' to your CI pipeline. Use Renovate or Dependabot for automated PR creation on vulnerable packages. Click for pro tip" [ref=e282] [cursor=pointer]':
+          - generic [ref=e283]: "04"
+          - img [ref=e285]
+          - heading "Update Dependencies" [level=3] [ref=e289]
+          - paragraph [ref=e290]: Run npm audit weekly. Patch CVEs.
+          - paragraph [ref=e292]: "Pro Tip: Add 'npm audit --production' to your CI pipeline. Use Renovate or Dependabot for automated PR creation on vulnerable packages."
+          - generic [ref=e293]: Click for pro tip
+        - 'button "05 Input Validation Validate ALL input server-side. Pro Tip: Use zod or joi for schema validation. Always sanitize with DOMPurify before rendering user content. Never trust req.body directly. Click for pro tip" [ref=e294] [cursor=pointer]':
+          - generic [ref=e295]: "05"
+          - img [ref=e297]
+          - heading "Input Validation" [level=3] [ref=e300]
+          - paragraph [ref=e301]: Validate ALL input server-side.
+          - paragraph [ref=e303]: "Pro Tip: Use zod or joi for schema validation. Always sanitize with DOMPurify before rendering user content. Never trust req.body directly."
+          - generic [ref=e304]: Click for pro tip
+        - 'button "06 Rate Limiting Block brute-force with rate limits. Pro Tip: Use express-rate-limit: windowMs: 15*60*1000, max: 100. For login: max 5 attempts per 15 min per IP. Add exponential backoff. Click for pro tip" [ref=e305] [cursor=pointer]':
+          - generic [ref=e306]: "06"
+          - img [ref=e308]
+          - heading "Rate Limiting" [level=3] [ref=e311]
+          - paragraph [ref=e312]: Block brute-force with rate limits.
+          - paragraph [ref=e314]: "Pro Tip: Use express-rate-limit: windowMs: 15*60*1000, max: 100. For login: max 5 attempts per 15 min per IP. Add exponential backoff."
+          - generic [ref=e315]: Click for pro tip
+        - 'button "07 Error Handling Never expose stack traces to users. Pro Tip: In production: app.use((err, req, res, next) => res.status(500).json({ error: ''Something went wrong'' })). Log full errors to Sentry/Datadog. Click for pro tip" [ref=e316] [cursor=pointer]':
+          - generic [ref=e317]: "07"
+          - img [ref=e319]
+          - heading "Error Handling" [level=3] [ref=e322]
+          - paragraph [ref=e323]: Never expose stack traces to users.
+          - paragraph [ref=e325]: "Pro Tip: In production: app.use((err, req, res, next) => res.status(500).json({ error: 'Something went wrong' })). Log full errors to Sentry/Datadog."
+          - generic [ref=e326]: Click for pro tip
+        - 'button "08 CORS & Cookies Strict origins + secure cookie flags. Pro Tip: Set: SameSite=Strict, HttpOnly, Secure on all auth cookies. CORS: origin: [''https://yourdomain.com'']. Never use origin: ''*'' in production. Click for pro tip" [ref=e327] [cursor=pointer]':
+          - generic [ref=e328]: "08"
+          - img [ref=e330]
+          - heading "CORS & Cookies" [level=3] [ref=e332]
+          - paragraph [ref=e333]: Strict origins + secure cookie flags.
+          - paragraph [ref=e335]: "Pro Tip: Set: SameSite=Strict, HttpOnly, Secure on all auth cookies. CORS: origin: ['https://yourdomain.com']. Never use origin: '*' in production."
+          - generic [ref=e336]: Click for pro tip
+    - generic [ref=e339]:
+      - generic [ref=e340]:
+        - generic [ref=e341]: Interactive Tool
+        - heading "Calculate Your Security Score" [level=2] [ref=e342]
+        - paragraph [ref=e343]: Tap each item you've implemented. Your score updates in real-time.
+      - generic [ref=e344]:
+        - generic [ref=e347]:
+          - generic [ref=e348]:
+            - img [ref=e349]
+            - generic [ref=e352]:
+              - generic [ref=e353]: "0"
+              - generic [ref=e354]: / 100
+          - generic [ref=e355]: Check items below
+          - paragraph [ref=e356]: Click items to calculate your score
+          - generic [ref=e358]:
+            - generic [ref=e359]: Implemented
+            - generic [ref=e360]: 0 / 12
+        - generic [ref=e362]:
+          - button "SSL certificate is valid and not expired Critical" [ref=e363] [cursor=pointer]:
+            - generic [ref=e365]: SSL certificate is valid and not expired
+            - generic [ref=e366]: Critical
+          - button "All HTTP requests redirect to HTTPS Critical" [ref=e367] [cursor=pointer]:
+            - generic [ref=e369]: All HTTP requests redirect to HTTPS
+            - generic [ref=e370]: Critical
+          - button "Passwords are hashed (not stored in plain text) Critical" [ref=e371] [cursor=pointer]:
+            - generic [ref=e373]: Passwords are hashed (not stored in plain text)
+            - generic [ref=e374]: Critical
+          - button "SQL queries use parameterized statements Critical" [ref=e375] [cursor=pointer]:
+            - generic [ref=e377]: SQL queries use parameterized statements
+            - generic [ref=e378]: Critical
+          - button "Security headers (CSP, HSTS, X-Frame) are set High" [ref=e379] [cursor=pointer]:
+            - generic [ref=e381]: Security headers (CSP, HSTS, X-Frame) are set
+            - generic [ref=e382]: High
+          - button "Dependencies have no known CVEs (npm audit) High" [ref=e383] [cursor=pointer]:
+            - generic [ref=e385]: Dependencies have no known CVEs (npm audit)
+            - generic [ref=e386]: High
+          - button "Rate limiting is enabled on login/API endpoints High" [ref=e387] [cursor=pointer]:
+            - generic [ref=e389]: Rate limiting is enabled on login/API endpoints
+            - generic [ref=e390]: High
+          - button "Error messages don't expose internal details Medium" [ref=e391] [cursor=pointer]:
+            - generic [ref=e393]: Error messages don't expose internal details
+            - generic [ref=e394]: Medium
+          - button "CORS is configured with specific allowed origins Medium" [ref=e395] [cursor=pointer]:
+            - generic [ref=e397]: CORS is configured with specific allowed origins
+            - generic [ref=e398]: Medium
+          - button "Session cookies use HttpOnly + Secure + SameSite Medium" [ref=e399] [cursor=pointer]:
+            - generic [ref=e401]: Session cookies use HttpOnly + Secure + SameSite
+            - generic [ref=e402]: Medium
+          - button "File uploads are validated and size-limited Medium" [ref=e403] [cursor=pointer]:
+            - generic [ref=e405]: File uploads are validated and size-limited
+            - generic [ref=e406]: Medium
+          - button "Admin panels are not publicly accessible High" [ref=e407] [cursor=pointer]:
+            - generic [ref=e409]: Admin panels are not publicly accessible
+            - generic [ref=e410]: High
+    - generic [ref=e413]:
+      - generic [ref=e414]:
+        - img [ref=e416]
+        - heading "Security Is Not Optional" [level=2] [ref=e418]
+        - paragraph [ref=e419]: "With data breaches costing an average of $4.45 million in 2025, security is not a feature - it's a foundation. Start with the basics above and build from there. Every fix you make protects real people's real data. Scan your site for free:"
+        - generic [ref=e420]:
+          - link "SSL Labs Test" [ref=e421] [cursor=pointer]:
+            - /url: https://www.ssllabs.com/ssltest/
+            - text: SSL Labs Test
+            - img [ref=e422]
+          - link "Security Headers Scan" [ref=e424] [cursor=pointer]:
+            - /url: https://securityheaders.com/
+            - text: Security Headers Scan
+            - img [ref=e425]
+          - link "Mozilla Observatory" [ref=e427] [cursor=pointer]:
+            - /url: https://observatory.mozilla.org/
+            - text: Mozilla Observatory
+            - img [ref=e428]
+      - paragraph [ref=e430]: Written by Anup Singh - Senior Software Engineer with 9.5+ years of experience building secure, scalable web applications.
+    - generic [ref=e433]:
+      - generic [ref=e434]:
+        - generic [ref=e435]: Continue Learning
+        - heading "Read Next" [level=2] [ref=e436]
+      - generic [ref=e437]:
+        - link "Developer optimizing React app performance React Performance How I Optimized React App Performance by 40% at Enterprise Scale Deep dive into techniques that reduced Time to Interactive by 40% for millions of users." [ref=e438] [cursor=pointer]:
+          - /url: /blog/how-i-optimized-react-app-performance-by-40-percent
+          - img "Developer optimizing React app performance" [ref=e440]
+          - generic [ref=e442]:
+            - generic [ref=e443]:
+              - generic [ref=e444]: React
+              - generic [ref=e445]: Performance
+            - heading "How I Optimized React App Performance by 40% at Enterprise Scale" [level=3] [ref=e446]
+            - paragraph [ref=e447]: Deep dive into techniques that reduced Time to Interactive by 40% for millions of users.
+          - img [ref=e449]
+        - link "Frontend architecture patterns and system design Architecture Senior Engineer 7 Frontend Architecture Patterns Every Senior Engineer Should Master Battle-tested patterns from micro-frontends to feature flags that will level up your engineering." [ref=e451] [cursor=pointer]:
+          - /url: /blog/frontend-architecture-patterns-senior-engineers
+          - img "Frontend architecture patterns and system design" [ref=e453]
+          - generic [ref=e455]:
+            - generic [ref=e456]:
+              - generic [ref=e457]: Architecture
+              - generic [ref=e458]: Senior Engineer
+            - heading "7 Frontend Architecture Patterns Every Senior Engineer Should Master" [level=3] [ref=e459]
+            - paragraph [ref=e460]: Battle-tested patterns from micro-frontends to feature flags that will level up your engineering.
+          - img [ref=e462]
+  - generic [ref=e465]:
+    - paragraph [ref=e466]: © 2026 Anup Singh. Senior Frontend Developer & React Engineer.
+    - link "Back to all articles" [ref=e467] [cursor=pointer]:
+      - /url: /blog
+      - img [ref=e468]
+      - text: Back to all articles

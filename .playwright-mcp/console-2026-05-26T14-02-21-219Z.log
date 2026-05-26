@@ -1,0 +1,479 @@
+[    1671ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  125059ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  125902ms] [LOG] [Fast Refresh] done in 843ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  140329ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  140654ms] [LOG] [Fast Refresh] done in 325ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  410392ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  410858ms] [LOG] [Fast Refresh] done in 466ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  469636ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  470005ms] [LOG] [Fast Refresh] done in 369ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  480627ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  480886ms] [LOG] [Fast Refresh] done in 259ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  548768ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  548824ms] [ERROR] Warning: Prop `%s` did not match. Server: %s Client: %s%s style "height:3.488512259486506px;animation-delay:600ms;animation-duration:0.8s" "height:3.4885122594865057px;animation-delay:600ms;animation-duration:0.8s" 
+    at div
+    at div
+    at div
+    at div
+    at div
+    at div
+    at ArticleTTS (webpack-internal:///(app-pages-browser)/./components/DataProtectionBlog.tsx:70:86)
+    at div
+    at section
+    at div
+    at DataProtectionBlog (webpack-internal:///(app-pages-browser)/./components/DataProtectionBlog.tsx:1941:26)
+    at div
+    at main
+    at BlogPostPage (Server)
+    at InnerLayoutRouter (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:243:11)
+    at RedirectErrorBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/redirect-boundary.js:74:9)
+    at RedirectBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/redirect-boundary.js:82:11)
+    at NotFoundBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:349:11)
+    at ErrorBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/error-boundary.js:160:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at OuterLayoutRouter (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:370:11)
+    at InnerLayoutRouter (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:243:11)
+    at RedirectErrorBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/redirect-boundary.js:74:9)
+    at RedirectBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/redirect-boundary.js:82:11)
+    at NotFoundBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:349:11)
+    at ErrorBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/error-boundary.js:160:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at OuterLayoutRouter (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:370:11)
+    at InnerLayoutRouter (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:243:11)
+    at RedirectErrorBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/redirect-boundary.js:74:9)
+    at RedirectBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/redirect-boundary.js:82:11)
+    at NotFoundErrorBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:349:11)
+    at ErrorBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/error-boundary.js:160:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at OuterLayoutRouter (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/layout-router.js:370:11)
+    at body
+    at html
+    at RootLayout (Server)
+    at RedirectErrorBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/redirect-boundary.js:74:9)
+    at RedirectBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/redirect-boundary.js:82:11)
+    at NotFoundErrorBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at DevRootNotFoundBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/dev-root-not-found-boundary.js:33:11)
+    at ReactDevOverlay (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:321:11)
+    at Router (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/app-router.js:207:11)
+    at ErrorBoundaryHandler (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/error-boundary.js:113:9)
+    at ErrorBoundary (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/error-boundary.js:160:11)
+    at AppRouter (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/app-router.js:585:13)
+    at ServerRoot (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:112:27)
+    at Root (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:117:11) @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[  555302ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  555873ms] [LOG] [Fast Refresh] done in 571ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  561402ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  561545ms] [ERROR] ./components/DataProtectionBlog.tsx
+Error: 
+  x the name `checkedCount` is defined multiple times
+     ,-[/Users/anup.singh/Projects/anup-portfolio-next/components/DataProtectionBlog.tsx:407:1]
+ 407 | 
+ 408 |   const circumference = 2 * Math.PI * 70;
+ 409 |   const offset = circumference - (circumference * score) / 100;
+ 410 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- previous definition of `checkedCount` here
+ 411 | 
+ 412 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- `checkedCount` redefined here
+ 413 | 
+ 414 |   return (
+ 415 |     <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+     `----
+
+Import trace for requested module:
+./components/DataProtectionBlog.tsx
+./app/blog/[slug]/page.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[  562598ms] [LOG] [Fast Refresh] done in 1197ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  563100ms] [LOG] [Fast Refresh] done in 1698ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  563194ms] [ERROR] ./components/DataProtectionBlog.tsx
+Error: 
+  x the name `checkedCount` is defined multiple times
+     ,-[/Users/anup.singh/Projects/anup-portfolio-next/components/DataProtectionBlog.tsx:407:1]
+ 407 | 
+ 408 |   const circumference = 2 * Math.PI * 70;
+ 409 |   const offset = circumference - (circumference * score) / 100;
+ 410 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- previous definition of `checkedCount` here
+ 411 | 
+ 412 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- `checkedCount` redefined here
+ 413 | 
+ 414 |   return (
+ 415 |     <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+     `----
+
+Import trace for requested module:
+./components/DataProtectionBlog.tsx
+./app/blog/[slug]/page.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[  563334ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/blog/data-protection-web-security-essentials?_rsc=1s3iu:0
+[  563354ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/blog/data-protection-web-security-essentials?_rsc=1s3iu:0
+[  563382ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/blog/data-protection-web-security-essentials?_rsc=1s3iu:0
+[  563475ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  563701ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29889
+[  563764ms] ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error: 
+  x the name `checkedCount` is defined multiple times
+     ,-[/Users/anup.singh/Projects/anup-portfolio-next/components/DataProtectionBlog.tsx:407:1]
+ 407 | 
+ 408 |   const circumference = 2 * Math.PI * 70;
+ 409 |   const offset = circumference - (circumference * score) / 100;
+ 410 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- previous definition of `checkedCount` here
+ 411 | 
+ 412 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- `checkedCount` redefined here
+ 413 | 
+ 414 |   return (
+ 415 |     <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+     `----
+
+    at processResult (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/webpack/bundle5.js:28:400590)
+    at <unknown> (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/webpack/bundle5.js:28:402302)
+    at <unknown> (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js:1:8645)
+    at <unknown> (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js:1:5019)
+    at r.callback (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js:1:4039)
+[  563816ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:38
+[  563890ms] [ERROR] ./components/DataProtectionBlog.tsx
+Error: 
+  x the name `checkedCount` is defined multiple times
+     ,-[/Users/anup.singh/Projects/anup-portfolio-next/components/DataProtectionBlog.tsx:407:1]
+ 407 | 
+ 408 |   const circumference = 2 * Math.PI * 70;
+ 409 |   const offset = circumference - (circumference * score) / 100;
+ 410 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- previous definition of `checkedCount` here
+ 411 | 
+ 412 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- `checkedCount` redefined here
+ 413 | 
+ 414 |   return (
+ 415 |     <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+     `----
+
+Import trace for requested module:
+./components/DataProtectionBlog.tsx
+./app/blog/[slug]/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  564000ms] [ERROR] ./components/DataProtectionBlog.tsx
+Error: 
+  x the name `checkedCount` is defined multiple times
+     ,-[/Users/anup.singh/Projects/anup-portfolio-next/components/DataProtectionBlog.tsx:407:1]
+ 407 | 
+ 408 |   const circumference = 2 * Math.PI * 70;
+ 409 |   const offset = circumference - (circumference * score) / 100;
+ 410 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- previous definition of `checkedCount` here
+ 411 | 
+ 412 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- `checkedCount` redefined here
+ 413 | 
+ 414 |   return (
+ 415 |     <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+     `----
+
+Import trace for requested module:
+./components/DataProtectionBlog.tsx
+./app/blog/[slug]/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  564037ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/webpack/98796b3046a284ef.webpack.hot-update.json:0
+[  564037ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:347
+[  564049ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/favicon.ico:0
+[  564133ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  564278ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29889
+[  564319ms] ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error: 
+  x the name `checkedCount` is defined multiple times
+     ,-[/Users/anup.singh/Projects/anup-portfolio-next/components/DataProtectionBlog.tsx:407:1]
+ 407 | 
+ 408 |   const circumference = 2 * Math.PI * 70;
+ 409 |   const offset = circumference - (circumference * score) / 100;
+ 410 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- previous definition of `checkedCount` here
+ 411 | 
+ 412 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- `checkedCount` redefined here
+ 413 | 
+ 414 |   return (
+ 415 |     <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+     `----
+
+    at processResult (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/webpack/bundle5.js:28:400590)
+    at <unknown> (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/webpack/bundle5.js:28:402302)
+    at <unknown> (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js:1:8645)
+    at <unknown> (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js:1:5019)
+    at r.callback (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js:1:4039)
+[  564361ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:38
+[  564361ms] [ERROR] ./components/DataProtectionBlog.tsx
+Error: 
+  x the name `checkedCount` is defined multiple times
+     ,-[/Users/anup.singh/Projects/anup-portfolio-next/components/DataProtectionBlog.tsx:407:1]
+ 407 | 
+ 408 |   const circumference = 2 * Math.PI * 70;
+ 409 |   const offset = circumference - (circumference * score) / 100;
+ 410 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- previous definition of `checkedCount` here
+ 411 | 
+ 412 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- `checkedCount` redefined here
+ 413 | 
+ 414 |   return (
+ 415 |     <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+     `---- @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  571499ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:221
+[  571549ms] [ERROR] ./components/DataProtectionBlog.tsx
+Error: 
+  x the name `checkedCount` is defined multiple times
+     ,-[/Users/anup.singh/Projects/anup-portfolio-next/components/DataProtectionBlog.tsx:407:1]
+ 407 | 
+ 408 |   const circumference = 2 * Math.PI * 70;
+ 409 |   const offset = circumference - (circumference * score) / 100;
+ 410 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- previous definition of `checkedCount` here
+ 411 | 
+ 412 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- `checkedCount` redefined here
+ 413 | 
+ 414 |   return (
+ 415 |     <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+     `----
+
+Import trace for requested module:
+./components/DataProtectionBlog.tsx
+./app/blog/[slug]/page.tsx @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  571606ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/webpack/98796b3046a284ef.webpack.hot-update.json:0
+[  571607ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:347
+[  571791ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  571929ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29889
+[  571936ms] ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error: 
+  x the name `checkedCount` is defined multiple times
+     ,-[/Users/anup.singh/Projects/anup-portfolio-next/components/DataProtectionBlog.tsx:407:1]
+ 407 | 
+ 408 |   const circumference = 2 * Math.PI * 70;
+ 409 |   const offset = circumference - (circumference * score) / 100;
+ 410 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- previous definition of `checkedCount` here
+ 411 | 
+ 412 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- `checkedCount` redefined here
+ 413 | 
+ 414 |   return (
+ 415 |     <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+     `----
+
+    at processResult (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/webpack/bundle5.js:28:400590)
+    at <unknown> (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/webpack/bundle5.js:28:402302)
+    at <unknown> (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js:1:8645)
+    at <unknown> (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js:1:5019)
+    at r.callback (file:///Users/anup.singh/Projects/anup-portfolio-next/node_modules/next/dist/compiled/loader-runner/LoaderRunner.js:1:4039)
+[  571949ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:38
+[  571950ms] [ERROR] ./components/DataProtectionBlog.tsx
+Error: 
+  x the name `checkedCount` is defined multiple times
+     ,-[/Users/anup.singh/Projects/anup-portfolio-next/components/DataProtectionBlog.tsx:407:1]
+ 407 | 
+ 408 |   const circumference = 2 * Math.PI * 70;
+ 409 |   const offset = circumference - (circumference * score) / 100;
+ 410 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- previous definition of `checkedCount` here
+ 411 | 
+ 412 |   const checkedCount = checks.filter(Boolean).length;
+     :         ^^^^^^|^^^^^
+     :               `-- `checkedCount` redefined here
+ 413 | 
+ 414 |   return (
+ 415 |     <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 lg:gap-12">
+     `---- @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:62
+[  590158ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:221
+[  590428ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:221
+[  590627ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:347
+[  590666ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1779804731807' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  590703ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/main-app.js?v=1779804731807:0
+[  590703ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1779804731807' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  590704ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app-pages-internals.js:0
+[  590704ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  590717ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/page.js:0
+[  590717ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  656539ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1779804797692' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  656553ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/webpack.js?v=1779804797692:0
+[  656553ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/webpack.js?v=1779804797692' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  656553ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/main-app.js?v=1779804797692:0
+[  656553ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1779804797692' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  656553ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app-pages-internals.js:0
+[  656553ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  656554ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js:0
+[  656554ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  656554ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/page.js:0
+[  656554ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657329ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1779804798496' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657341ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/main-app.js?v=1779804798496:0
+[  657341ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1779804798496' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657341ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js:0
+[  657341ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657341ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app-pages-internals.js:0
+[  657341ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657342ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/webpack.js?v=1779804798496:0
+[  657342ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/webpack.js?v=1779804798496' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657343ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/page.js:0
+[  657343ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657523ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1779804798692' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657537ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/main-app.js?v=1779804798692:0
+[  657537ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1779804798692' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657537ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app-pages-internals.js:0
+[  657537ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657538ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js:0
+[  657538ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657539ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/webpack.js?v=1779804798692:0
+[  657539ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/webpack.js?v=1779804798692' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  657539ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/page.js:0
+[  657539ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  660183ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1779804801310' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  660230ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/webpack.js?v=1779804801310:0
+[  660230ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/webpack.js?v=1779804801310' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  660231ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/main-app.js?v=1779804801310:0
+[  660231ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1779804801310' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  660232ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app-pages-internals.js:0
+[  660232ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  660238ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js:0
+[  660238ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  660249ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/page.js:0
+[  660249ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  663393ms] [WARNING] The resource https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  706493ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1779804847634' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  706510ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/main-app.js?v=1779804847634:0
+[  706510ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1779804847634' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  706510ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app-pages-internals.js:0
+[  706510ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  706511ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/webpack.js?v=1779804847634:0
+[  706511ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/webpack.js?v=1779804847634' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  706511ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js:0
+[  706511ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  706511ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/page.js:0
+[  706511ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  708618ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1779804849777' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  708633ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/webpack.js?v=1779804849777:0
+[  708633ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/webpack.js?v=1779804849777' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  708634ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app-pages-internals.js:0
+[  708634ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  708634ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/main-app.js?v=1779804849777:0
+[  708634ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1779804849777' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  708634ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/page.js:0
+[  708634ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  708635ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js:0
+[  708635ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709108ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1779804850275' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709124ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/webpack.js?v=1779804850275:0
+[  709124ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/webpack.js?v=1779804850275' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709124ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app-pages-internals.js:0
+[  709124ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709125ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js:0
+[  709125ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709125ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/page.js:0
+[  709125ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709125ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/main-app.js?v=1779804850275:0
+[  709125ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1779804850275' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709336ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1779804850469' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709362ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/webpack.js?v=1779804850469:0
+[  709362ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/webpack.js?v=1779804850469' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709364ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/main-app.js?v=1779804850469:0
+[  709364ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1779804850469' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709364ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app-pages-internals.js:0
+[  709364ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709366ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js:0
+[  709366ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  709371ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/page.js:0
+[  709371ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  712516ms] [WARNING] The resource https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  751835ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1779804892994' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  751846ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/main-app.js?v=1779804892994:0
+[  751846ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1779804892994' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  751847ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app-pages-internals.js:0
+[  751847ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  751847ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/webpack.js?v=1779804892994:0
+[  751848ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/webpack.js?v=1779804892994' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  751848ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/page.js:0
+[  751848ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  751848ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js:0
+[  751848ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/blog/%5Bslug%5D/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  754853ms] [WARNING] The resource https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  943304ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  943314ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  944321ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  945333ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  946343ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  947351ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  948360ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  948425ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  948433ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  948848ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  948856ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  949007ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  949017ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  949192ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  949201ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  949374ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  949383ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  949557ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  949566ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  949749ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  949757ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  950765ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  951774ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  952783ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  953792ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  954802ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  955812ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  956820ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  957828ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  958837ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
+[  959846ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/blog/data-protection-web-security-essentials:0
