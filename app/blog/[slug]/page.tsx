@@ -13,6 +13,7 @@ import TextToSpeech from "@/components/TextToSpeech";
 import MarkdownContent from "@/components/MarkdownContent";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import BlogNav from "@/components/BlogNav";
+import DataProtectionBlog from "@/components/DataProtectionBlog";
 
 interface Props {
   params: { slug: string };
@@ -116,6 +117,40 @@ export default function BlogPostPage({ params }: Props) {
         p.categories.some((c) => post.categories.includes(c))
     )
     .slice(0, 2);
+
+  // Full-width custom layout for specific posts
+  if (post.layout === "full-width") {
+    return (
+      <main className="min-h-screen bg-[#fffef5]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <BlogNav />
+        <div className="pt-16">
+          <DataProtectionBlog />
+        </div>
+        {/* Footer */}
+        <footer className="border-t border-amber-200 py-8 bg-[#fefce8]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-gray-500 text-sm">
+              &copy; 2026 Anup Singh. Senior Frontend Developer &amp; React Engineer.
+            </p>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-amber-700 hover:text-amber-900 font-semibold text-sm transition-colors"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <line x1="19" y1="12" x2="5" y2="12" />
+                <polyline points="12 19 5 12 12 5" />
+              </svg>
+              Back to all articles
+            </Link>
+          </div>
+        </footer>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-white">

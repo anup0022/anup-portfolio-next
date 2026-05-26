@@ -43,9 +43,33 @@ export const categories: BlogCategory[] = [
     description: "Engineering leadership, mentoring, and career growth",
     color: "#10B981",
   },
+  {
+    id: "security",
+    name: "Security",
+    slug: "security",
+    description: "Web security, data protection, and cybersecurity best practices",
+    color: "#EF4444",
+  },
 ];
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: "4",
+    slug: "data-protection-web-security-essentials",
+    title: "Data Protection: Why 68% of Websites Are Insecure & How to Fix Yours",
+    excerpt:
+      "A comprehensive visual guide to understanding web security vulnerabilities, data protection fundamentals, and the essential steps every developer must take to protect user data in 2026.",
+    coverImage: "/blog/data-protection-cover.svg",
+    coverImageAlt: "Data protection shield with lock icon representing web security",
+    date: "2026-05-26",
+    modified: "2026-05-26",
+    author: "Anup Singh",
+    categories: ["security", "architecture"],
+    tags: ["Security", "Data Protection", "HTTPS", "OWASP", "Encryption", "Privacy", "Web Security"],
+    featured: true,
+    layout: "full-width",
+    content: "full-width-custom",
+  },
   {
     id: "1",
     slug: "how-i-optimized-react-app-performance-by-40-percent",

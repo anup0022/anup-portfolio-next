@@ -12,6 +12,7 @@ export interface BlogPost {
   tags: string[];
   featured: boolean;
   content: string;
+  layout?: "default" | "full-width";
 }
 
 export interface BlogCategory {

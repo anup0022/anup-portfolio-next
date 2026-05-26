@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -20,6 +20,20 @@ export default function BlogNav() {
     setMobileOpen(false);
   }, [pathname]);
 
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
+  const toggleMenu = useCallback(() => {
+    setMobileOpen((prev) => !prev);
+  }, []);
+
   const navLinks = [
     { href: "/#about", label: "About" },
     { href: "/#skills", label: "Skills" },
@@ -31,7 +45,7 @@ export default function BlogNav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+      className={`fixed top-0 left-0 right-0 z-[1000] transition-[padding,background-color,border-color] duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${
         scrolled
           ? "py-3 bg-[#06080d]/85 backdrop-blur-[20px] border-b border-white/[0.06]"
           : "py-5 bg-[#06080d]"
@@ -73,34 +87,41 @@ export default function BlogNav() {
           })}
         </nav>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Toggle - min 44x44 touch target */}
         <button
           type="button"
-          className="flex md:hidden flex-col gap-[5px] cursor-pointer p-2 relative z-50 touch-manipulation"
-          onClick={() => setMobileOpen(!mobileOpen)}
+          className="flex md:hidden items-center justify-center w-11 h-11 cursor-pointer touch-manipulation relative z-[1001] -mr-2"
+          onClick={toggleMenu}
+          onTouchEnd={(e) => {
+            e.preventDefault();
+            toggleMenu();
+          }}
           aria-label="Toggle navigation menu"
+          aria-expanded={mobileOpen}
         >
-          <span
-            className={`block w-6 h-[2px] bg-[#e8edf5] rounded-full transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] ${
-              mobileOpen ? "rotate-45 translate-y-[7px]" : ""
-            }`}
-          />
-          <span
-            className={`block w-6 h-[2px] bg-[#e8edf5] rounded-full transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] ${
-              mobileOpen ? "opacity-0 scale-x-0" : ""
-            }`}
-          />
-          <span
-            className={`block w-6 h-[2px] bg-[#e8edf5] rounded-full transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] ${
-              mobileOpen ? "-rotate-45 -translate-y-[7px]" : ""
-            }`}
-          />
+          <div className="flex flex-col gap-[5px]">
+            <span
+              className={`block w-6 h-[2px] bg-[#e8edf5] rounded-full transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] origin-center ${
+                mobileOpen ? "rotate-45 translate-y-[7px]" : ""
+              }`}
+            />
+            <span
+              className={`block w-6 h-[2px] bg-[#e8edf5] rounded-full transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+                mobileOpen ? "opacity-0 scale-x-0" : ""
+              }`}
+            />
+            <span
+              className={`block w-6 h-[2px] bg-[#e8edf5] rounded-full transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] origin-center ${
+                mobileOpen ? "-rotate-45 -translate-y-[7px]" : ""
+              }`}
+            />
+          </div>
         </button>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-[#0c1019]/98 backdrop-blur-[20px] border-b border-white/[0.06] transition-all duration-[400ms] ease-[cubic-bezier(0.23,1,0.32,1)] overflow-hidden ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-[#0c1019]/98 backdrop-blur-[20px] border-b border-white/[0.06] transition-[max-height,opacity] duration-[400ms] ease-[cubic-bezier(0.23,1,0.32,1)] overflow-hidden ${
           mobileOpen ? "max-h-[400px] opacity-100 pointer-events-auto" : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
