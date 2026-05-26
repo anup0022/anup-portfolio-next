@@ -75,7 +75,8 @@ export default function BlogNav() {
 
         {/* Mobile Toggle */}
         <button
-          className="flex md:hidden flex-col gap-[5px] cursor-pointer p-2 relative z-50"
+          type="button"
+          className="flex md:hidden flex-col gap-[5px] cursor-pointer p-2 relative z-50 touch-manipulation"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation menu"
         >
@@ -99,8 +100,8 @@ export default function BlogNav() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-[#0c1019]/98 backdrop-blur-[20px] border-b border-white/[0.06] transition-all duration-400 ease-[cubic-bezier(0.23,1,0.32,1)] overflow-hidden ${
-          mobileOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden absolute top-full left-0 right-0 bg-[#0c1019]/98 backdrop-blur-[20px] border-b border-white/[0.06] transition-all duration-[400ms] ease-[cubic-bezier(0.23,1,0.32,1)] overflow-hidden ${
+          mobileOpen ? "max-h-[400px] opacity-100 pointer-events-auto" : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
         <nav className="flex flex-col py-4 px-6">
