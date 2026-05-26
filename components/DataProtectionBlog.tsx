@@ -287,7 +287,7 @@ function ArticleTTS() {
 }
 
 /* ─────────────────────────────────────────────
-   SVG: Shield Hero Illustration
+   SVG: Data Breach Flow Diagram
 ───────────────────────────────────────────── */
 function ShieldHeroSVG() {
   return (
@@ -875,7 +875,7 @@ export default function DataProtectionBlog() {
                 Why Security Fixes Are More Critical Than Ever in the AI Age
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                The explosive growth of AI and automation has fundamentally changed the cybersecurity landscape. Here's why protecting your data is no longer optional.
+                The explosive growth of AI and automation has fundamentally changed the cybersecurity landscape. Here&apos;s why protecting your data is no longer optional.
               </p>
             </div>
           </AnimateIn>
@@ -1000,7 +1000,7 @@ export default function DataProtectionBlog() {
         <div className="max-w-4xl mx-auto">
           <AnimateIn>
             <div className="mb-8">
-              <span className="text-xs font-bold text-red-600 uppercase tracking-[0.2em] mb-3 block">Learn from Others' Mistakes</span>
+              <span className="text-xs font-bold text-red-600 uppercase tracking-[0.2em] mb-3 block">Learn from Others&apos; Mistakes</span>
               <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-6">Recent High-Profile Breaches</h2>
               <p className="text-gray-700 leading-relaxed text-lg">
                 In 2024-2025, major organizations paid a heavy price for security gaps: A healthcare provider faced a <strong>$12.8M fine</strong> after 3.2M patient records were exposed through an unpatched SQL injection. An e-commerce platform lost <strong>$8.4M</strong> when AI-powered credential stuffing compromised 1.7M accounts—no 2FA enforcement. A university paid a <strong>$2.1M ransom</strong> after AI-generated phishing emails encrypted 890K student records, exploiting admin accounts without MFA. All three breaches were preventable with basic security hygiene, yet averaged <strong>127 days</strong> before detection. The 8 fixes above would have stopped every single attack.
