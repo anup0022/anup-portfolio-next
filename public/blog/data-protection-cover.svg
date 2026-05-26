@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#06080d"/>
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <!-- Background grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00d4ff" stroke-width="0.3" opacity="0.1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <!-- Glow effects -->
+  <circle cx="600" cy="315" r="200" fill="#00d4ff" opacity="0.03"/>
+  <circle cx="600" cy="315" r="300" fill="#7c3aed" opacity="0.02"/>
+  <!-- Shield -->
+  <path d="M600 150 L750 210 L750 380 C750 460 600 520 600 520 C600 520 450 460 450 380 L450 210 Z" fill="#0c1220" stroke="url(#g2)" stroke-width="3"/>
+  <!-- Inner shield -->
+  <path d="M600 180 L720 230 L720 370 C720 430 600 480 600 480 C600 480 480 430 480 370 L480 230 Z" fill="url(#g1)"/>
+  <!-- Lock body -->
+  <rect x="560" y="320" width="80" height="65" rx="10" fill="none" stroke="#00d4ff" stroke-width="4"/>
+  <!-- Lock shackle -->
+  <path d="M575 320 V290 C575 265 587 250 600 250 C613 250 625 265 625 290 V320" fill="none" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/>
+  <!-- Keyhole -->
+  <circle cx="600" cy="350" r="8" fill="#00d4ff"/>
+  <rect x="597" y="355" width="6" height="15" rx="3" fill="#00d4ff"/>
+  <!-- Checkmark badge -->
+  <circle cx="700" cy="230" r="28" fill="#10b981"/>
+  <polyline points="685,230 697,242 716,220" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Orbiting elements -->
+  <circle cx="380" cy="250" r="6" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="820" cy="400" r="5" fill="#7c3aed" opacity="0.5"/>
+  <circle cx="500" cy="500" r="4" fill="#10b981" opacity="0.4"/>
+  <circle cx="700" cy="150" r="4" fill="#f59e0b" opacity="0.4"/>
+  <!-- Text -->
+  <text x="600" y="590" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#64748b">DATA PROTECTION &amp; WEB SECURITY ESSENTIALS</text>
+</svg>
