@@ -47,7 +47,7 @@ export default function BlogNav() {
     <header
       className={`fixed top-0 left-0 right-0 z-[1000] transition-[padding,background-color,border-color] duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${
         scrolled
-          ? "py-3 bg-[#06080d]/85 backdrop-blur-[20px] border-b border-white/[0.06]"
+          ? "py-3 bg-[#06080d] border-b border-white/[0.06] shadow-[0_2px_20px_rgba(0,0,0,0.3)]"
           : "py-5 bg-[#06080d]"
       }`}
     >
@@ -121,7 +121,7 @@ export default function BlogNav() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-[#0c1019]/98 backdrop-blur-[20px] border-b border-white/[0.06] transition-[max-height,opacity] duration-[400ms] ease-[cubic-bezier(0.23,1,0.32,1)] overflow-hidden ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-[#0c1019] border-b border-white/[0.06] shadow-[0_4px_20px_rgba(0,0,0,0.4)] transition-[max-height,opacity] duration-[400ms] ease-[cubic-bezier(0.23,1,0.32,1)] overflow-hidden ${
           mobileOpen ? "max-h-[400px] opacity-100 pointer-events-auto" : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
