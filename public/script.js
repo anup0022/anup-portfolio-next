@@ -163,6 +163,32 @@ function closeNav() {
     document.getElementById('navToggle').classList.remove('active');
 }
 
+// Bind toggle to nav button
+const navToggleBtn = document.getElementById('navToggle');
+if (navToggleBtn) {
+    navToggleBtn.addEventListener('click', toggleNav);
+    navToggleBtn.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        toggleNav();
+    });
+}
+
+// Close nav when clicking a nav link
+document.querySelectorAll('#navLinks a').forEach(link => {
+    link.addEventListener('click', closeNav);
+});
+
+// Close nav when clicking outside
+document.addEventListener('click', function(e) {
+    const navLinks = document.getElementById('navLinks');
+    const navToggle = document.getElementById('navToggle');
+    if (navLinks && navLinks.classList.contains('open')) {
+        if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+            closeNav();
+        }
+    }
+});
+
 // ========== TYPED TEXT EFFECT ==========
 const titles = [
     'Senior Software Engineer',

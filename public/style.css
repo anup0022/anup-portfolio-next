@@ -183,6 +183,9 @@ img { max-width: 100%; display: block; }
     gap: 5px;
     cursor: pointer;
     z-index: 1001;
+    padding: 10px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .nav-toggle span {
@@ -1985,6 +1988,7 @@ img { max-width: 100%; display: block; }
 .page-loader.hidden {
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
 }
 
 .loader-content {
