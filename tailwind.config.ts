@@ -1,60 +1,74 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * Colour tokens live in globals.css as space-separated RGB channels
+ * (`--sv-ink: 6 8 13`) rather than hex, so Tailwind's `<alpha-value>`
+ * modifier resolves. A bare `var(--x)` here silently breaks `bg-x/80`.
+ */
+const channel = (name: string) => `rgb(var(--${name}) / <alpha-value>)`;
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./content/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        ink: channel("sv-ink"),
+        ink2: channel("sv-ink-2"),
+        ink3: channel("sv-ink-3"),
+        ink4: channel("sv-ink-4"),
+        accent: channel("sv-accent"),
+        accentHot: channel("sv-accent-hot"),
+        gold: channel("sv-gold"),
+        violet: channel("sv-violet"),
+        jade: channel("sv-jade"),
+        ember: channel("sv-ember"),
+        txt1: channel("sv-text-1"),
+        txt2: channel("sv-text-2"),
+        txt3: channel("sv-text-3"),
+        // Aliases so existing /blog classes keep resolving.
+        background: channel("sv-ink"),
+        foreground: channel("sv-text-1"),
       },
-      keyframes: {
-        fadeSlideIn: {
-          from: { opacity: "0", transform: "translateX(-20px)" },
-          to: { opacity: "1", transform: "translateX(0)" },
-        },
-        shimmer: {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(100%)" },
-        },
-        bounceCheck: {
-          "0%": { transform: "scale(1)" },
-          "30%": { transform: "scale(1.4) rotate(5deg)" },
-          "50%": { transform: "scale(0.9) rotate(-3deg)" },
-          "70%": { transform: "scale(1.15) rotate(2deg)" },
-          "100%": { transform: "scale(1.1) rotate(0deg)" },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-8px)" },
-        },
-        wiggle: {
-          "0%, 100%": { transform: "rotate(0deg)" },
-          "25%": { transform: "rotate(-2deg)" },
-          "75%": { transform: "rotate(2deg)" },
-        },
-        scaleIn: {
-          from: { opacity: "0", transform: "scale(0.8)" },
-          to: { opacity: "1", transform: "scale(1)" },
-        },
-        slideUp: {
-          from: { opacity: "0", transform: "translateY(30px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
+      fontFamily: {
+        display: ["var(--font-outfit)", "ui-sans-serif", "system-ui", "sans-serif"],
+        body: ["var(--font-dm-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
-      animation: {
-        fadeSlideIn: "fadeSlideIn 0.6s ease forwards",
-        shimmer: "shimmer 2s infinite",
-        bounceCheck: "bounceCheck 0.5s ease",
-        float: "float 3s ease-in-out infinite",
-        wiggle: "wiggle 2s ease-in-out infinite",
-        scaleIn: "scaleIn 0.5s ease forwards",
-        slideUp: "slideUp 0.6s ease forwards",
+      letterSpacing: {
+        "lab-1": "0.18em",
+        "lab-2": "0.24em",
+        "lab-3": "0.30em",
+        "lab-4": "0.42em",
+        "tight-display": "-0.03em",
       },
+      fontSize: {
+        kicker: ["0.625rem", { lineHeight: "1", letterSpacing: "0.30em" }],
+        label: ["0.6875rem", { lineHeight: "1", letterSpacing: "0.24em" }],
+        meta: ["0.8125rem", { lineHeight: "1.5" }],
+        "card-title": ["clamp(1.5rem, 3vw, 2.3rem)", { lineHeight: "1.05", letterSpacing: "-0.015em" }],
+        section: ["clamp(2.2rem, 5.5vw, 4.2rem)", { lineHeight: "0.95", letterSpacing: "-0.02em" }],
+        hero: ["clamp(3.2rem, 10vw, 7.5rem)", { lineHeight: "0.88", letterSpacing: "-0.035em" }],
+        ghost: ["clamp(7rem, 18vw, 13rem)", { lineHeight: "0.75" }],
+      },
+      transitionTimingFunction: { sv: "var(--sv-ease)", svIn: "var(--sv-ease-in)" },
+      transitionDuration: { "220": "220ms", "420": "420ms", "700": "700ms", "1100": "1100ms" },
+      boxShadow: {
+        card: "0 12px 40px rgba(0, 0, 0, 0.55)",
+        lift: "0 28px 70px -18px rgba(0, 0, 0, 0.8)",
+        glow: "0 0 60px rgba(0, 212, 255, 0.30)",
+        glowLg: "0 0 110px rgba(0, 212, 255, 0.22)",
+      },
+      backgroundImage: {
+        scrim: "linear-gradient(to top, rgb(var(--sv-ink) / 0.92), rgb(var(--sv-ink) / 0.12) 55%, transparent)",
+        scanlines: "repeating-linear-gradient(0deg, rgb(255 255 255 / 0.055) 0 1px, transparent 1px 4px)",
+      },
+      spacing: { gutter: "var(--sv-gutter)", nav: "var(--sv-nav-h)" },
+      zIndex: { art: "1", scrim: "3", copy: "4", nav: "60", grain: "90", curtain: "120", toast: "150" },
+      maxWidth: { shell: "88rem" },
     },
   },
   plugins: [require("@tailwindcss/typography")],

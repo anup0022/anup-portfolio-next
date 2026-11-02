@@ -2,15 +2,240 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   Design tokens — "The Catalogue"
+   Colours are space-separated RGB channels so Tailwind's <alpha-value>
+   modifier works (bg-ink/80). Never store these as hex.
+   ========================================================================== */
 :root {
-  --foreground: #ededed;
+  color-scheme: dark;
+
+  --sv-ink: 6 8 13;
+  --sv-ink-2: 12 16 25;
+  --sv-ink-3: 17 24 39;
+  --sv-ink-4: 26 35 50;
+
+  --sv-accent: 0 212 255;
+  --sv-accent-hot: 102 232 255;
+  --sv-gold: 240 192 64;
+  --sv-violet: 168 85 247;
+  --sv-jade: 61 220 151;
+  --sv-ember: 255 138 76;
+
+  --sv-text-1: 232 237 245;
+  --sv-text-2: 136 146 164;
+  /* Raised from the old #5a6477 (~4.0:1, fails AA) to 5.4:1 on #06080d. */
+  --sv-text-3: 122 133 153;
+
+  --sv-ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --sv-ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+
+  --sv-d-1: 220ms;
+  --sv-d-2: 420ms;
+  --sv-d-3: 700ms;
+  --sv-d-4: 1100ms;
+
+  --sv-gutter: clamp(16px, 4vw, 56px);
+  --sv-nav-h: 64px;
+
+  --sv-seam-gradient: linear-gradient(90deg, transparent, rgb(var(--sv-accent) / 0.65), transparent);
+
+  /* Legacy aliases — some /blog markup still references these. */
   --background: #06080d;
+  --foreground: #e8edf5;
 }
 
+@media (min-width: 768px) {
+  :root { --sv-nav-h: 72px; }
+}
+
+html {
+  background: #06080d;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--sv-nav-h) + 16px);
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--sv-accent)) rgb(var(--sv-ink-2));
+}
+html::-webkit-scrollbar { width: 6px; }
+html::-webkit-scrollbar-track { background: rgb(var(--sv-ink-2)); }
+html::-webkit-scrollbar-thumb { background: rgb(var(--sv-accent)); border-radius: 3px; }
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: "DM Sans", sans-serif;
+  background: #06080d;
+  color: rgb(var(--sv-text-1));
+  font-family: var(--font-dm-sans), "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Scoped component layer — everything below is under .sv (the home page
+   <main>) so /blog is never touched by it.
+   ========================================================================== */
+@layer components {
+  .sv-gutter { padding-inline: var(--sv-gutter); }
+
+  .sv-rail {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    /* overflow-x:auto forces overflow-y to compute to auto, which clips a
+       card that lifts on hover. This padding is the clearance. */
+    padding-block: 1.5rem 2rem;
+  }
+  .sv-rail::-webkit-scrollbar { display: none; }
+
+  /* Trailing padding on a flex scroller is dropped from the scroll extent in
+     several engines; a spacer child is not. */
+  .sv-rail > :last-child::after {
+    content: "";
+    display: block;
+    width: var(--sv-gutter);
+    flex: 0 0 var(--sv-gutter);
+  }
+
+  .sv-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(var(--sv-text-1) / 0.22);
+  }
+  @supports not (-webkit-text-stroke: 1px black) {
+    .sv-outline { color: rgb(var(--sv-text-1) / 0.14); -webkit-text-stroke: 0; }
+  }
+
+  .sv-glass {
+    background: linear-gradient(180deg, rgb(255 255 255 / 0.07), rgb(255 255 255 / 0.025));
+    border-bottom: 1px solid rgb(255 255 255 / 0.09);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+
+  .sv-grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 90;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+  @media (max-width: 767px) {
+    .sv-grain { opacity: 0.03; }
+  }
+
+  .sv-seam {
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 1px;
+    background: var(--sv-seam-gradient);
+  }
+
+  .sv-skip {
+    position: fixed;
+    top: -100px;
+    left: 12px;
+    z-index: 150;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: rgb(var(--sv-ink-3));
+    color: rgb(var(--sv-text-1));
+    outline: 2px solid rgb(var(--sv-accent-hot));
+    transition: top var(--sv-d-1) var(--sv-ease);
+  }
+  .sv-skip:focus { top: 12px; }
+}
+
+.sv :where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid rgb(var(--sv-accent-hot));
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* --- Scroll reveal -------------------------------------------------------
+   The hidden state is gated on html.sv-js, added by the inline head script.
+   No JS / failed bundle / non-executing crawler => content is simply visible.
+   Serialising opacity:0 into server HTML is how a redesign de-indexes itself.
+   ------------------------------------------------------------------------ */
+html.sv-js .sv [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--sv-d-3) var(--sv-ease), transform var(--sv-d-3) var(--sv-ease);
+}
+html.sv-js .sv [data-reveal][data-shown] {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Hero role rotator ---------------------------------------------------
+   All five role strings are real text nodes; CSS only cycles their opacity.
+   ------------------------------------------------------------------------ */
+.sv-roles { position: relative; display: block; min-height: 1.4em; }
+.sv-roles > span {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: sv-roles 15s var(--sv-ease) infinite;
+  animation-delay: calc(var(--i) * 3s);
+}
+@keyframes sv-roles {
+  0%, 2%   { opacity: 0; transform: translateY(8px); }
+  6%, 18%  { opacity: 1; transform: none; }
+  22%, 100% { opacity: 0; transform: translateY(-8px); }
+}
+
+/* --- Opening curtain, pre-paint -----------------------------------------
+   A pseudo-element on <html>, which React never hydrates, so there is no
+   mismatch. It hides nothing from the DOM. The 4s CSS failsafe guarantees
+   the page becomes visible even if the JS bundle never arrives.
+   ------------------------------------------------------------------------ */
+html[data-sv-entry="play"]::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: #06080d;
+  z-index: 119;
+  pointer-events: none;
+  animation: sv-failsafe 0s linear 4s forwards;
+}
+@keyframes sv-failsafe {
+  to { opacity: 0; visibility: hidden; }
+}
+html[data-sv-entry="skip"]::before { display: none; }
+
+/* --- Reduced motion ------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  html[data-sv-entry]::before { display: none; }
+
+  .sv *, .sv *::before, .sv *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .sv [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  /* The rotator degrades to a static middot-separated line; all five titles
+     stay readable by assistive tech. */
+  .sv-roles { min-height: 0; }
+  .sv-roles > span { position: static; display: inline; opacity: 1; animation: none; }
+  .sv-roles > span + span::before { content: " · "; }
+  .sv-grain { display: none; }
+}
+
+/* --- Windows high contrast ----------------------------------------------- */
+@media (forced-colors: active) {
+  .sv-outline { color: currentColor; -webkit-text-stroke: 0; }
+  .sv [style*="background-clip"] {
+    -webkit-text-fill-color: currentColor;
+    background: none;
+  }
 }
 
 /* Blog Animated Illustrations */
