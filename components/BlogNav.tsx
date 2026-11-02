@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { crossRouteNavLinks } from "@/content/portfolio/sections";
 
 export default function BlogNav() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,14 +35,11 @@ export default function BlogNav() {
     setMobileOpen((prev) => !prev);
   }, []);
 
-  const navLinks = [
-    { href: "/#about", label: "About" },
-    { href: "/#skills", label: "Skills" },
-    { href: "/#experience", label: "Experience" },
-    { href: "/#projects", label: "Projects" },
-    { href: "/blog", label: "Blog" },
-    { href: "/#contact", label: "Contact" },
-  ];
+  // Generated from the home page's section registry so a renamed section can
+  // never silently turn these into links that scroll nowhere.
+  const navLinks = crossRouteNavLinks.filter((l) =>
+    ["About", "Stack", "Career", "Originals", "Field Notes", "Contact"].includes(l.label)
+  );
 
   return (
     <header

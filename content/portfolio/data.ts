@@ -533,3 +533,4 @@ export const credentials: Credential[] = [
 export const episodeCount = volumes.reduce((n, v) => n + v.episodes.length, 0);
 export const volumeMeta = `${volumes.length} VOLUMES · ${episodeCount} EPISODES`;
 export const originalsMeta = `${originals.length} ORIGINALS · PRODUCED AT GALE`;
+export const skillCount = stack.reduce((n, g) => n + g.skills.length, 0);

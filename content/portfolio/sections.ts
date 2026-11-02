@@ -24,7 +24,7 @@
  *    smooth-scroll library. Cut for cost on mid-range mobile.
  */
 import type { SectionId, SectionMeta } from "./types";
-import { originalsMeta, volumeMeta } from "./data";
+import { originalsMeta, skillCount, volumeMeta } from "./data";
 
 /**
  * `anchor` is the contract with the rest of the site and MUST NOT CHANGE:
@@ -75,7 +75,7 @@ export const sections: SectionMeta[] = [
     nav: "Stack",
     kicker: "TOOLS OF RECORD",
     heading: "The Stack",
-    lede: "Thirty tools, grouped. Open any one to see where it actually shipped.",
+    lede: `${skillCount} tools, grouped. Open any one to see where it actually shipped.`,
     kind: "section",
   },
   {

@@ -84,8 +84,11 @@ body {
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
-    /* overflow-x:auto forces overflow-y to compute to auto, which clips a
-       card that lifts on hover. This padding is the clearance. */
+    /* overflow-x:auto forces overflow-y to compute to auto. Left at auto,
+       any child that bleeds vertically (a KeyArt light sweep does) makes the
+       rail a vertical scroller too, and a wheel over it traps the page.
+       Clip it explicitly; padding-block is the clearance for the hover lift. */
+    overflow-y: hidden;
     padding-block: 1.5rem 2rem;
   }
   .sv-rail::-webkit-scrollbar { display: none; }
@@ -181,10 +184,12 @@ html.sv-js .sv [data-reveal][data-shown] {
   animation: sv-roles 15s var(--sv-ease) infinite;
   animation-delay: calc(var(--i) * 3s);
 }
+/* Five spans share a 15s cycle, each delayed by 3s. The visible window is
+   0-20% so each role hands over to the next with no blank gap between. */
 @keyframes sv-roles {
-  0%, 2%   { opacity: 0; transform: translateY(8px); }
-  6%, 18%  { opacity: 1; transform: none; }
-  22%, 100% { opacity: 0; transform: translateY(-8px); }
+  0%       { opacity: 0; transform: translateY(8px); }
+  3%, 17%  { opacity: 1; transform: none; }
+  20%, 100% { opacity: 0; transform: translateY(-8px); }
 }
 
 /* --- Opening curtain, pre-paint -----------------------------------------

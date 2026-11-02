@@ -72,8 +72,9 @@ export function Reveal({
   );
 }
 
-/** Callers pass this so item 10 of a rail is not held back 700ms. */
-export const revealDelay = (i: number) => Math.min(i, 5) * 70;
+// revealDelay lives in @/lib/reveal — a plain function exported from a
+// 'use client' module is a client reference, not a callable, in server code.
+export { revealDelay } from "@/lib/reveal";
 
 /* -------------------------------------------------------------------- Rail */
 function RailArrows({ rail }: { rail: React.RefObject<HTMLUListElement> }) {

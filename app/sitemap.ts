@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllPosts, getAllCategories } from "@/lib/blog";
+import { RELAUNCH_DATE } from "@/lib/structured-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.anup-singh.in";
@@ -10,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date("2026-05-24"),
+      lastModified: new Date(RELAUNCH_DATE),
       changeFrequency: "monthly",
       priority: 1.0,
     },

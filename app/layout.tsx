@@ -1,6 +1,37 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import { DM_Sans, Outfit } from "next/font/google";
 import "./globals.css";
+
+/**
+ * Self-hosted through next/font: the @font-face rules are inlined, the two
+ * preconnects and the render-blocking stylesheet round trip are gone, and the
+ * emitted size-adjust fallback removes font-swap CLS. Weight lists are trimmed
+ * to what the design actually uses.
+ */
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+/**
+ * The entry gate. Synchronous and blocking by design — it must run before the
+ * first paint so `html.sv-js` (which arms the reveal animations) and
+ * `data-sv-entry` (which decides whether the opening curtain plays) are already
+ * correct on the first frame. React does not re-render these, so there is no
+ * flash and no hydration mismatch. The outer try/catch matters: an uncaught
+ * throw here would block first paint, and the fallback still sets `sv-js` so a
+ * partial failure leaves content visible rather than hidden.
+ */
+const ENTRY_GATE = `try{var d=document.documentElement;d.classList.add('sv-js');var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;var s=false;try{s=!!sessionStorage.getItem('sv.intro')}catch(e){}d.dataset.svEntry=(r||s)?'skip':'play'}catch(e){document.documentElement.className+=' sv-js'}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.anup-singh.in"),
@@ -77,18 +108,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${outfit.variable} ${dmSans.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
-          rel="stylesheet"
-        />
+        <script dangerouslySetInnerHTML={{ __html: ENTRY_GATE }} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bangalore" />
@@ -98,19 +124,10 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        {/* Google Analytics 4 - Replace G-XXXXXXXXXX with your actual GA4 Measurement ID */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
-          `}
-        </Script>
+        {/* Analytics intentionally omitted: the previous tag shipped the literal
+            placeholder id G-XXXXXXXXXX, costing a DNS lookup, a connection and a
+            script parse on every route for no data. Re-add a real GA4 (or other)
+            measurement id here when one exists. */}
       </body>
     </html>
   );
