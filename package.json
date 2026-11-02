@@ -1,27 +1,31 @@
 {
-  "name": "anup-portfolio-next",
-  "version": "0.1.0",
+  "name": "anup-singh-portfolio",
   "private": true,
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "images": "node scripts/build-images.mjs",
+    "cutout": "swift scripts/cutout.swift pic1.jpeg .pic.raw.png both && node scripts/defringe.mjs .pic.raw.png pic.png && rm -f .pic.raw.png",
+    "portrait": "npm run cutout && npm run images"
   },
   "dependencies": {
-    "next": "^14.2.35",
-    "react": "^18",
-    "react-dom": "^18"
+    "framer-motion": "11.18.2",
+    "lenis": "1.1.20",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.19",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.20",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
-  }
+    "@tailwindcss/vite": "4.1.4",
+    "@types/react": "18.3.20",
+    "@types/react-dom": "18.3.6",
+    "@vitejs/plugin-react": "4.4.1",
+    "sharp": "0.34.1",
+    "tailwindcss": "4.1.4",
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
+  },
+  "description": "Portfolio of Anup Singh \u2014 Senior Software Engineer and Frontend Developer, Bangalore."
 }
