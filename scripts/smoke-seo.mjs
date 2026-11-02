@@ -7,12 +7,13 @@
  */
 import { readFileSync } from "node:fs";
 
-const FILE = ".next/server/app/index.html";
+const DIST = process.env.NEXT_DIST_DIR || ".next";
+const FILE = `${DIST}/server/app/index.html`;
 let html;
 try {
   html = readFileSync(FILE, "utf8");
 } catch {
-  console.error(`Cannot read ${FILE}. Run \`npm run build\` first.`);
+  console.error(`Cannot read ${FILE}. Run \`npm run verify\` (or \`npm run build\`) first.`);
   process.exit(1);
 }
 

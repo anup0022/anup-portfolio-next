@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // `npm run verify` sets this so a production build does not overwrite the
+  // running dev server's .next, which leaves it serving 500s until restarted.
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   // Allow images from WordPress.com and other common CDNs
   images: {
     remotePatterns: [
